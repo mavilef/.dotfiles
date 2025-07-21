@@ -1,0 +1,96 @@
+" Enable syntax highlighting for better readability of code
+set hls
+
+" Show line numbers to make it easier to navigate through code
+set nu
+
+" Set incremental search to find the next match as you type your search
+set is
+
+" Show the ruler (line and column number) at the bottom of the window
+set ruler
+
+" Display incomplete commands in the command area to see what you're typing
+set showcmd
+
+" Set tab stops at 4 spaces for consistent tab size
+set tabstop=4
+
+" Set the width for auto-indents (like when you press 'Enter') to 4 spaces
+set shiftwidth=4
+
+" Convert tabs to spaces for consistent whitespace usage
+set expandtab
+
+" Always display the status line, even if only one window is displayed
+set laststatus=2
+
+" Highlight the current line to make it easier to track the cursor
+set cursorline
+
+" Do not wrap lines which prevents horizontal scrolling
+set nowrap
+
+" Set the window's title to the name of the file being edited for easy identification
+set title
+
+" Disable wrapping of search commands, meaning the search won't wrap around the file
+set nowrapscan
+
+" Use system's clipboards instead of internal registers
+set clipboard=unnamedplus
+
+" Set the line numbers to be relative
+set relativenumber
+
+" Clear search highlighting with double Escape
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+
+" Visual indication for text longer than 88 characters with a specific background color just for python
+" Black compliant
+augroup python_config
+  autocmd!                                 
+  " Define (or re-use) the highlight once; it’s harmless if other files see it
+  autocmd FileType python highlight ColorColumn ctermbg=DarkCyan
+
+  " Show a single vertical bar in column 80 for Python buffers only
+  autocmd FileType python setlocal colorcolumn=88 textwidth=88
+
+  " Highlight any empty space in the beggining of the line
+augroup END
+
+" Configuration to open help text in a vertical window instead of a horizontal split
+augroup vimrc_help
+  autocmd!
+  autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
+augroup END
+
+" Expand the file path completion to include all files in the project recursively
+set path+=**
+
+" Enhance command-line completion with a navigable menu interface
+set wildmenu
+
+" Configurations for Netrw, Vim's built-in file explorer
+
+" Turn off the banner for a cleaner interface
+let g:netrw_banner=0
+
+" Open files in the existing window rather than creating a new split
+let g:netrw_browse_split=0
+
+" When making vertical splits, place the new window to the right of the current one
+let g:netrw_altv=1
+
+" Display files and directories in a tree-style listing
+let g:netrw_liststyle=3
+
+" Enable filetype detection
+filetype on
+
+set background=dark
+colorscheme evening
+
+" Turn on syntax highlighting
+syntax on
+

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/maviles/projects/git-gdrive-remote/src'
+let g:netrw_dirhist_6='/home/maviles/projects/git-gdrive-remote'
+let g:netrw_dirhist_5='/home/maviles/projects/git-gdrive-remote/src'
+let g:netrw_dirhist_4='/home/maviles/projects/git-gdrive-remote'
+let g:netrw_dirhist_3='/home/maviles/projects'
+let g:netrw_dirhist_2='/home/maviles/projects/git-gdrive-remote/src'
+let g:netrw_dirhist_1='/home/maviles/projects/git-gdrive-remote'
+let g:netrw_dirhist_0='/home/maviles/projects/git-gdrive-remote/src'
+let g:netrw_dirhist_9='/home/maviles/projects/git-gdrive-remote'
+let g:netrw_dirhist_8='/home/maviles/projects/git-gdrive-remote/src'
