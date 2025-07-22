@@ -43,6 +43,9 @@ set clipboard=unnamedplus
 " Set the line numbers to be relative
 set relativenumber
 
+" Use ctags to navigate in the project
+set tags=./tags;,tags
+
 " Clear search highlighting with double Escape
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 
