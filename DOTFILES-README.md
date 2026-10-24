@@ -1,9 +1,9 @@
 # Dotfiles na home com Git bare
 
-Este repositório usa caminhos relativos à home: `.tmux.conf` e `.vim/`
+Este repositório usa caminhos relativos à home: `.bashrc` e `.vim/`
 (vimrc, vim-airline e tema vim-code-dark). O diretório `~/.dotfiles` guarda
 somente os metadados do Git; os arquivos de configuração ficam em `$HOME`.
-Git, Vim e tmux precisam estar instalados separadamente.
+Git e Vim precisam estar instalados separadamente.
 
 ## Instalar
 
@@ -31,8 +31,7 @@ alias dotfiles-config='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 ```
 
 Abra um novo terminal e confira `dotfiles-config status`. Reabra o Vim para
-carregar a configuração. Em uma sessão tmux existente, execute
-`tmux source-file ~/.tmux.conf`; o prefixo configurado é Ctrl+A.
+carregar a configuração.
 
 ## Migrar um clone normal sem perder commits locais
 
@@ -62,8 +61,8 @@ push. Persista o alias como descrito acima.
 ```bash
 dotfiles-config status
 dotfiles-config diff
-dotfiles-config add "$HOME/.tmux.conf" "$HOME/.vim/vimrc"
-dotfiles-config commit -m "Atualiza configurações de tmux e Vim"
+dotfiles-config add "$HOME/.bashrc" "$HOME/.vim/vimrc"
+dotfiles-config commit -m "Atualiza configurações de Bash e Vim"
 dotfiles-config push -u origin HEAD
 ```
 
